@@ -122,17 +122,16 @@ $( document ).ready(function() {
 
         e.preventDefault();
     });
-    
+
     $('#btnSave').click(function (e) {
         var output = '';
-        for (i = 1; i < $('#lstBox2 option').length + 1; i++) { 
+        for (i = 1; i < $('#lstBox2 option').length + 1; i++) {
             output += $('#lstBox2 option:nth-of-type(' + i + ')').text() + "\n";
         }
-        
-        $.post('test.php', {data: output}, success);
+
+        $.post('creator.php', {data: output}, success);
         e.preventDefault();
     });
-    
 });
 </script>
 
